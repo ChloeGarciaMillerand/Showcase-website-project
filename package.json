@@ -1,0 +1,35 @@
+{
+  "name": "photograph",
+  "version": "0.1.0",
+  "description": "site vitrine pour un photographe",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ChloeGarciaMillerand/Showcase-website-project.git"
+  },
+  "type": "module",
+  "keywords": [
+    "ejs",
+    "js",
+    "css",
+    "epxress",
+    "nodejs",
+    "sql"
+  ],
+  "author": "chloe",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ChloeGarciaMillerand/Showcase-website-project/issues"
+  },
+  "homepage": "https://github.com/ChloeGarciaMillerand/Showcase-website-project#readme",
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "ejs": "^3.1.10",
+    "express": "^4.21.2",
+    "nodemon": "^3.1.9"
+  }
+}
