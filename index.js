@@ -2,6 +2,8 @@ import express from 'express';
 import path from 'node:path';
 import 'dotenv/config';
 
+import { router } from './src/router.js';
+
 const app = express();
 
 //config ejs + statics
@@ -11,6 +13,8 @@ app.use(express.static(path.join(import.meta.dirname, 'public')));
 
 //acces req.body
 app.use(express.urlencoded({extended: false}));
+
+app.use(router);
 
 //start server
 const port = process.env.PORT;
