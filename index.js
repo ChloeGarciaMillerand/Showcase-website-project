@@ -16,6 +16,9 @@ app.use(express.urlencoded({extended: false}));
 
 app.use(router);
 
+//manage error
+app.use(notFound);
+
 //start server
 const port = process.env.PORT;
 const base_url = process.env.BASE_URL;
