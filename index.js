@@ -3,6 +3,8 @@ import path from 'node:path';
 import 'dotenv/config';
 
 import { router } from './src/router.js';
+import { notFound } from './src/middlewares/error/notFound.js';
+import { errorHandler } from './src/middlewares/error/errorHandler.js';
 
 const app = express();
 
@@ -18,6 +20,7 @@ app.use(router);
 
 //manage error
 app.use(notFound);
+app.use(errorHandler);
 
 //start server
 const port = process.env.PORT;

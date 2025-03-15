@@ -1,0 +1,42 @@
+<%- include('partials/header') %>
+
+<section class="ohana-presentation">
+    <div class="ohona-text-container">
+        <h2>Qui suis-je</h2>
+        <p class="presentation-text">
+            JJe suis photographe, passionnée par l'art de capturer l'instant. Je m'efforce de créer des images qui racontent une histoire unique. Chaque photographie est pour moi une manière de saisir l'émotion, la beauté et la vérité du moment.
+
+            J'aime explorer les différentes cultures et les beautés du monde, unvoyage étant pour moi une nouvelle opportunité de découvrir des perspectives inédites et de figer des instants qui souvent échappent à l'œil nu. La photographie est pour moi bien plus qu'un métier, c'est une manière d'exprimer mon admiration pour la diversité et la richesse de notre monde.
+        </p>
+        <div class="presentation-button-container">
+            <button type="button"><a href="/about">Découvrir la suite</a></button>
+            <button type="button"><a href="/catalogue">Catalogue</a></button>
+        </div>
+    </div>
+    <div class="presentation-image-container">
+        <img src="/img/about.jpg" alt="photographe dans la forêt">
+    </div>
+</section>
+
+<section class="new-photos">
+    <h2>Nouveautés</h2>
+    <div class="photos-container">
+        <% if (locals.photos && locals.photos.length) { %>
+            <% for( let photo of photos ) { %>
+                <div class="new-photo">
+                    <h3><%= photo.name %></h3>
+                    <div class="photo-image-container">
+                        <img src="/img/<%= photo.id %>.jpg" alt="<%= photo.name %>">
+                    </div>
+                    <p class="photo-description" id="photo-characteristic"><%= photo.catagory %></p>
+                    <p class="photo-description">
+                        <%= photo.description %>
+                    </p>
+                    <button type="button"><a href="/product/<%= photo.id %>">Découvrir</a></button>
+                </div>
+            <% } %>
+        <% } %>
+    </div>
+</section>
+    
+<%- include('partials/footer') %>
