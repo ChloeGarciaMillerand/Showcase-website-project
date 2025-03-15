@@ -1,37 +1,36 @@
-CREATE DATABASE PhotoGallery;
+DROP TABLE IF EXISTS "photos";
 
-USE PhotoGallery;
 
-CREATE TABLE Photos (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    pays VARCHAR(100),
-    date DATE,
-    description TEXT,
-    categorie VARCHAR(100),
-    image VARCHAR(100)
+CREATE TABLE IF NOT EXISTS "photos" (
+    "id" SERIAL PRIMARY KEY,
+    "country" VARCHAR(100),
+    "date" DATE,
+    "description" TEXT,
+    "category" VARCHAR(100),
+    "image" VARCHAR(100)
 );
 
--- Insertion des données existantes dans la table Photos
+set client_encoding to utf8;
 
-INSERT INTO Photos (pays, date, description, categorie, image)
+INSERT INTO "photos"("id", "country", "date", "description", "category", "image")
 VALUES
-('Japon', '2023-05-10', "Tori dans un parc japonais", 'architecture', '01.jpg'),
-('Japon', '2023-05-12', "Barils de sake japonais", 'architecture', '02.jpg'),
-('Japon', '2023-05-17', "Toits japonais", 'architecture', '03.jpg'),
-('Japon', '2023-05-18', "Jeune japonaise en habits traditionnels", 'portrait', '04.jpg'),
-('Maroc', '2023-10-09', "Coursive d'un palais marocain", 'architecture', '05.jpg'),
-('Italie', '2024-06-27', "Citrons dans un panier", 'nourriture', '06.jpg'),
-('Islande', '2022-09-28', "Maison en bois jaune au bord de l'eau", 'nature', '07.jpg'),
-('France', '2024-04-01', "Table avec des décorations de Pâques", 'nourriture', '08.jpg'),
-('Grèce', '2021-03-18', "Colonne de temple grec", 'architecture', '09.jpg'),
-('France', '2024-08-15', "Surfer", 'nature', '10.jpg'),
-('Nouvelle-Zélande', '2020-05-18', "Route en bord de lac et montagnes en arrière plan", 'architecture', '11.jpg'),
-('Etats-Unis', '2022-10-16', "Maison en bois bleu", 'architecture', '12.jpg'),
-('Japon', '2024-05-18', "cerisiers en fleurs au bord de l'eau", 'nature', '13.jpg'),
-('Pays-Bas', '2023-02-27', "Bateau amarré dans un port hollandais", 'architecture', '14.jpg'),
-('Grèce', '2021-03-15', "Homme regardant des mouettes depuis un bateau", 'portrait', '15.jpg'),
-('Maroc', '2023-10-10', "jeune marocain", 'portrait', '16.jpg'),
-('France', '2024-09-08', "Couple assis dans des chaises de camping dans la nature", 'portrait', '17.jpg'),
-('France', '2024-09-18', "jeune fille au regard mélancolique dans un parc", 'portrait', '18.jpg'),
-('France', '2023-03-01', "Table avec un café et du mimosa", 'nourriture', '19.jpg'),
-('France', '2020-07-05', "saladier de cassis", 'nourriture', '20.jpg');
+(01, 'Japon', '2023-05-10', 'Tori dans un parc japonais', 'architecture', '01.jpg'),
+(02, 'Japon', '2023-05-12', 'Barils de sake japonais', 'architecture', '02.jpg'),
+(03, 'Japon', '2023-05-17', 'Toits japonais', 'architecture', '03.jpg'),
+(04, 'Japon', '2023-05-18', 'Jeune japonaise en habits traditionnels', 'portrait', '04.jpg'),
+(05, 'Maroc', '2023-10-09', 'Coursive d''un palais marocain', 'architecture', '05.jpg'),
+(06, 'Italie', '2024-06-27', 'Citrons dans un panier', 'nourriture', '06.jpg'),
+(07, 'Islande', '2022-09-28', 'Maison en bois jaune au bord de l''eau', 'nature', '07.jpg'),
+(08, 'France', '2024-04-01', 'Table avec des décorations de Pâques', 'nourriture', '08.jpg'),
+(09, 'Grèce', '2021-03-18', 'Colonne de temple grec', 'architecture', '09.jpg'),
+(10, 'France', '2024-08-15', 'Surfer', 'nature', '10.jpg'),
+(11, 'Nouvelle-Zélande', '2020-05-18', 'Route en bord de lac et montagnes en arrière plan', 'architecture', '11.jpg'),
+(12, 'Etats-Unis', '2022-10-16', 'Maison en bois bleu', 'architecture', '12.jpg'),
+(13, 'Japon', '2024-05-18', 'Cerisiers en fleurs au bord de l''eau', 'nature', '13.jpg'),
+(14, 'Pays-Bas', '2023-02-27', 'Bateau amarré dans un port hollandais', 'architecture', '14.jpg'),
+(15, 'Grèce', '2021-03-15', 'Homme regardant des mouettes depuis un bateau', 'portrait', '15.jpg'),
+(16, 'Maroc', '2023-10-10', 'Jeune marocain', 'portrait', '16.jpg'),
+(17, 'France', '2024-09-08', 'Couple assis dans des chaises de camping dans la nature', 'portrait', '17.jpg'),
+(18, 'France', '2024-09-18', 'Jeune fille au regard mélancolique dans un parc', 'portrait', '18.jpg'),
+(19, 'France', '2023-03-01', 'Table avec un café et du mimosa', 'nourriture', '19.jpg'),
+(20, 'France', '2020-07-05', 'Saladier de cassis', 'nourriture', '20.jpg');
