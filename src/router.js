@@ -6,4 +6,6 @@ const router = Router ();
 
 router.get('/', mainController.showLastPhotos);
 
+router.get('/portfolio', mainController.showPhotos);
+
 export { router };

@@ -1,0 +1,66 @@
+<%- include('partials/header') %>
+
+<div class="portfolio-image">
+    <h2 id="portfolio-title">Notre catalogue</h2>
+</div>
+
+<section class="catalogue-new-photo">
+    <form class="category-form" methode="GET">
+        <label class="category-label" for="category">Catégorie</label>
+        <select class="category-select" name="category" id="category">
+            <option value="">Tout voir</option>
+            <% if (locals.categories?.length) { %>
+                <% for ( category of categories ) { %>
+                        <option value="<%= category.category %>">
+                            <% if (category.category === selectedCategory) { %><% } %>
+                            <%= category.category %>
+                        </option>
+                <% } %>
+            <% } %>
+        </select>
+        <button class="category-button" type="submit">Filtrer</button>
+    </form>
+
+    <div class="photos-container">
+        <% if (locals.photos?.length) { %>
+            <% let count = 0; %>
+            <% for ( let photo of photos ) { %>
+                    <% if (count < 3) { %>
+                        <div class="new-photo">
+                            <h3><%= photo.name %></h3>
+                            <div class="photo-image-container">
+                                <img src="/img/<%= photo.id.toString().padStart(2, '0') %>.jpg" alt="<%= photo.description %>">
+                            </div>
+                            <p class="photo-description" id="photo-category"><%= photo.category %></p>
+                            <p class="photo-description">
+                                <%= photo.description %>
+                            </p>
+                            <button type="button"><a href="/photo/<%= photo.id %>">Voir l'image</a></button>
+                        </div>
+                        <% count ++; %>
+                    <% } %> 
+            <% } %>
+        <% } %>
+    </div>
+    
+    
+    <div class="all-photos">
+        <% for( let photo of photos.slice(3) ) { %>
+            <div class="new-photo">
+                <h3><%= photo.name %></h3>
+                <div class="photo-image-container">
+                    <img src="/img/<%= photo.id.toString().padStart(2, '0') %>.jpg" alt="<%= photo.description %>">
+                </div>
+                <p class="photo-description" id="photo-category"><%= photo.category %></p>
+                <p class="photo-description">
+                    <%= photo.description %>
+                </p>
+                <button type="button"><a href="/photo/<%= photo.id %>">Voir l'image</a></button>
+            </div>
+        <% } %>
+   </div>
+
+   <button id="view-all" type="button">Voir tout</button>
+</section>
+<script src="/js/portfolio.js"></script>
+<%- include('partials/footer') %>
