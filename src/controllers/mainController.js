@@ -26,6 +26,23 @@ const mainController = {
             next(error);
         }
     },
+
+    async showOnePhoto (req, res, next) {
+        const photoId = req.params.id;
+
+        try {
+            const photo = await dataMapper.getOnePhoto(photoId);
+
+            if (!photo) {
+                return next();
+            }
+
+            res.render('photo', { photo });
+
+        } catch (error) {
+            next(error);
+        }
+    }
 }
 
 export { mainController };

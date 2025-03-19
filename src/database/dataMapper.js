@@ -27,6 +27,19 @@ const dataMapper = {
 
         const result = await client.query(query);
         return result.rows;
+    },
+
+    async getOnePhoto(id) {
+        const query = {
+            text: 'SELECT * FROM photos WHERE id = $1;',
+            values: [id],
+        };
+
+        const result = await client.query(query);
+
+        const ret = result.rowCount ? result.rows[0] : null;
+        
+        return ret;
     }
 }
 

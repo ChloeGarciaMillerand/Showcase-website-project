@@ -8,4 +8,6 @@ router.get('/', mainController.showLastPhotos);
 
 router.get('/portfolio', mainController.showPhotos);
 
+router.get('/photo/:id', mainController.showOnePhoto);
+
 export { router };

@@ -1,0 +1,25 @@
+<%- include('partials/header') %>
+
+<div class="photo-container">
+    <% if (locals.photo) { %>
+        <div class="photo-image">
+            <img src="/img/<%= photo.id %>.jpg" alt="<%= photo.description %>">
+            
+        </div>
+
+        <section class="photo-detail">
+            <time datetime="<%= photo.date.toISOString() %>"><%= photo.date.toLocaleDateString('fr-FR', { year: 'numeric', month: 'long', day: 'numeric' }) %></time>
+            <h3><%= photo.name %></h3>
+            <ul class="photo-detail-list">
+                <li>
+                    <%= photo.description %>
+                </li>
+                <li><span class="bold">Pays:</span> <%= photo.country %></li>
+                <li><span class="bold">Catégorie:</span> <%= photo.category %></li>
+            </ul>
+            <button type="button"><a href="/portfolio">Portfolio</a></button>
+        </section>
+    <% } %>
+</div>
+
+<%- include('partials/footer') %>
