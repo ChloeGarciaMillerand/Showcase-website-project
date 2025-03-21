@@ -130,32 +130,32 @@
     padding: 1rem 1.8rem;
 }
 
-/* Product */
-.product-container {
+/* Photo */
+.photo-container {
     display: flex;
     margin: 2rem;
     gap: 2rem;
 }
 
-.product-image {
+.photo-image {
     width: 50%;
 }
 
-.product-image img {
+.photo-image img {
     display: block;
     width: 100%;
 }
 
-.coffee-detail {
+.photo-detail {
     width: 50%;
     margin: 0 auto;
 }
 
-.coffee-detail-list {
+.photo-detail-list {
     margin: 1.5rem 0;
 }
 
-.coffee-detail-list li {
+.photo-detail-list li {
     margin: 1.1rem 0;
 
 }
