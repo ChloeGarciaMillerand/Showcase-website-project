@@ -1,0 +1,139 @@
+@font-face {
+    font-family: 'Pacifico';
+    src: url('../fonts/Pacifico-Regular.ttf') format('truetype');
+    font-weight: 100 900; 
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Quicksand';
+    src: url('../fonts/Quicksand-VariableFont_wght.ttf') format('truetype');
+    font-weight: 100 900;
+    font-style: normal;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --light-beige: #FEF1E1;
+    --beige: #F7DBB9;
+    --blue-grey: #50688f;
+    --dark-blue-grey: #2a4062;
+    --dark-grey: #242424;
+
+}
+
+body {
+    font-family: 'Manrope', sans-serif;
+}
+
+main {
+    width: 100%;
+}
+
+/* Header */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+    border-bottom: solid 1px var(--blue-grey);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1 {
+    font-family: 'Pacifico', sans-serif;
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--blue-grey);
+}
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+}
+
+li a {
+    text-decoration: none;
+    color: var(--blue-grey);
+    text-transform: uppercase;
+    font-weight: 500;
+    padding: 0.2rem 0.5rem;
+}
+
+li a:hover {
+    color: var(--dark-blue-grey);
+    text-decoration: underline;
+}
+
+.burger-menu-icon {
+    display: none;
+}
+
+/* main */
+
+h2 {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: var(--blue-grey);
+}
+
+button {
+    border: none;
+    background-color: var(--blue-grey);
+    text-transform: uppercase;
+    border-radius: 2px;
+    transition: background-color 0.2s ease;
+}
+
+button a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    transition: color 0.2s ease;
+    width: 100%;
+    height: 100%;
+    padding: 1rem 1.8rem;
+}
+
+button:hover {
+    background-color: var(--dark-blue-grey);
+}
+
+button a:hover {
+    color: white;
+    text-decoration: none;
+}
+
+h3 {
+    font-family: 'Quicksand', sans-serif;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--blue-grey);
+}
+
+/* Footer */
+
+footer {
+    text-align: center;
+    border-top: solid 1px var(--blue-grey);
+    padding: 1.5rem;
+}
+
+.footer-paragraph {
+    color: var(--blue-grey);
+}
