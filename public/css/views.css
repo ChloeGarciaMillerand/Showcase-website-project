@@ -73,8 +73,8 @@
 
 #photo-category {
     margin-right: auto;
-    color: var(--blue-grey);
-    border: solid 1px var(--blue-grey);
+    color: var(--dark-grey);
+    border: solid 1px var(--light-grey);
     border-radius: 2px;
     padding: 0.2rem 0.5rem;
 }
