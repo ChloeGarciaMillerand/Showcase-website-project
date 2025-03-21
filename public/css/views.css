@@ -79,27 +79,27 @@
     padding: 0.2rem 0.5rem;
 }
 
-/* Catalogue */
-.catalogue-new-cafes {
+/* Portfolio */
+.portfolio-new-photo {
     margin: 1rem;
 }
 
-#catalogue-title {
+#portfolio-title {
     text-align: center;
     padding-top: 10rem;
     padding-bottom: 10rem;
     color: white;
 }
 
-.catalogue-image {
-    background-image: url(../about.jpg);
+.portfolio-image {
+    background-image: url(../img/about.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     margin: 2rem;
 }
 
-/* Catalogue / Formulaire */
+/* Portfolio / Formulaire */
 .category-form {
     margin: 1rem;
     gap: 1rem;
@@ -113,30 +113,13 @@
     color: white;
 }
 
-/* Catalogue / cards */
-.cafes-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr; 
-}
+/* Portfolio / cards */
 
-.coffee-image-container {
-    margin-top: 1rem;
-    width: 100%;
-    height: 160px;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-}
-
-.coffee-image-container img {
-    width: 100%;
-}
-
-.all-cafes {
+.all-photos {
     display: none; 
 }
 
-.all-cafes.show {
+.all-photos.show {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr; 
 }
