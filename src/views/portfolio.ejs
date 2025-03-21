@@ -29,7 +29,7 @@
                         <div class="new-photo">
                             <h3><%= photo.name %></h3>
                             <div class="photo-image-container">
-                                <img src="/img/<%= photo.id.toString().padStart(2, '0') %>.jpg" alt="<%= photo.description %>">
+                                <img src="/img/<%= photo.id %>.jpg" alt="<%= photo.description %>">
                             </div>
                             <p class="photo-description" id="photo-category"><%= photo.category %></p>
                             <p class="photo-description">

@@ -71,10 +71,10 @@
     line-height: 1.5rem;
 }
 
-#photo-characteristic {
+#photo-category {
     margin-right: auto;
-    color: var(--gold);
-    border: solid 1px var(--gold);
+    color: var(--blue-grey);
+    border: solid 1px var(--blue-grey);
     border-radius: 2px;
     padding: 0.2rem 0.5rem;
 }
