@@ -42,7 +42,11 @@ const mainController = {
         } catch (error) {
             next(error);
         }
-    }
-}
+    },
+
+    async showAbout (req, res, next) {
+        res.render('about');
+    },
+};
 
 export { mainController };
