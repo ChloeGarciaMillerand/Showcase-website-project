@@ -1,0 +1,145 @@
+@media(max-width:800px) {
+    /* Catalogue */
+
+    .photos-container {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+    }
+
+    .all-photos.show {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+    }
+}
+
+@media(max-width:720px) {
+    /* Header */
+
+    header {
+        align-items: center;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    .navbar {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .nav-links {
+        margin: 0.5rem 0.5rem;
+        text-align: right;
+    }
+
+    .navbar.show {
+        display: flex;
+    }
+
+    .burger-menu-icon {
+        display: block;
+        padding: 0;
+        background-color: transparent;
+        fill: var(--chestnut);
+    }
+
+    .burger-menu-icon:hover {
+        background-color: transparent;
+    }
+
+    /* Index / Présentation */
+    .ohana-presentation {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .phana-text-container {
+        width: 100%;
+        padding-right: 0;
+        margin-bottom: 1.5rem;
+    }
+    
+    .ohana-image-container {
+        width: 100%;
+    }
+
+    /* Index / Nouveautés */
+    .photos-container {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+    }
+
+    .new-photo {
+        flex: 0 0 auto;
+        width: 45%;
+    }
+
+    /* Produit */
+    .photo-container {
+        flex-direction: column;
+        gap: 0;
+        margin: 0;
+    }
+
+    .photo-image {
+        margin: 2rem;
+        width: 90%;
+    }
+
+    .photo-detail {
+        width: 100%;
+        margin: 2rem auto;
+        padding: 0 2rem;
+    }
+
+    /* A propos */
+    .about-image img {
+        width: 90%;
+    }
+
+    .about-detail {
+        width: 90%;
+    }
+
+    .about-map {
+        width: 90%;
+    }
+
+    iframe {
+        width: 90%;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .contact {
+        width: 90%;
+    }
+}
+
+@media(max-width:400px) {
+    /* Header */
+    header {
+        padding: 0 0.5rem;
+    }
+
+    /* Index / Nouveautés */
+    .new-photo {
+        width: 75%;
+    }
+
+    /* Product */
+    .phpto-image img {
+        width: 90%;
+    }
+
+    .photo-detail {
+        width: 90%;
+    }
+}
