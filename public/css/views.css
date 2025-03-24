@@ -28,9 +28,13 @@
 
 .presentation-image-container img {
     max-width: 100%;
+    border-radius: 5px;
 }
 
 /* Index / Nouveautés */
+
+ 
+
 .new-photos {
     margin: 1rem;
 }
@@ -42,6 +46,16 @@
 .photos-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+}
+
+.simple-photo {
+    margin: 1rem;
+    position: relative;
+}
+
+.image-simple-photo {
+    width: 100%;
+    border-radius: 5px;
 }
 
 .new-photo {
@@ -67,12 +81,14 @@
 }
 
 .photo-description {
-    margin: 1rem 0;
+    margin: 1rem;
     line-height: 1.5rem;
+    position: absolute;
+    top: 2px;
+    right: 2px;
 }
 
 #photo-category {
-    margin-right: auto;
     color: var(--dark-grey);
     border: solid 1px var(--light-grey);
     border-radius: 2px;
@@ -121,7 +137,7 @@
 
 .all-photos.show {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr; 
+    grid-template-columns: 1fr 1fr 1fr;
 }
 
 #view-all {

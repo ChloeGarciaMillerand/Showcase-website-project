@@ -26,16 +26,11 @@
             <% let count = 0; %>
             <% for ( let photo of photos ) { %>
                     <% if (count < 3) { %>
-                        <div class="new-photo">
-                            <h3><%= photo.name %></h3>
-                            <div class="photo-image-container">
-                                <img src="/img/<%= photo.id %>.jpg" alt="<%= photo.description %>">
+                        <div class="simple-photo">
+                            <div class="simple-photo">
+                                <a href="/photo/<%= photo.id %>"><img class="image-simple-photo" src="/img/<%= photo.id %>.jpg" alt="<%= photo.name %>"></a>
+                                <p class="photo-description" id="photo-category"><%= photo.category %></p>
                             </div>
-                            <p class="photo-description" id="photo-category"><%= photo.category %></p>
-                            <p class="photo-description">
-                                <%= photo.description %>
-                            </p>
-                            <button type="button"><a href="/photo/<%= photo.id %>">Voir l'image</a></button>
                         </div>
                         <% count ++; %>
                     <% } %> 
@@ -46,16 +41,11 @@
     
     <div class="all-photos">
         <% for( let photo of photos.slice(3) ) { %>
-            <div class="new-photo">
-                <h3><%= photo.name %></h3>
-                <div class="photo-image-container">
-                    <img src="/img/<%= photo.id %>.jpg" alt="<%= photo.description %>">
+            <div class="simple-photo">
+                <div class="simple-photo">
+                    <a href="/photo/<%= photo.id %>"><img class="image-simple-photo" src="/img/<%= photo.id %>.jpg" alt="<%= photo.name %>"></a>
+                    <p class="photo-description" id="photo-category"><%= photo.category %></p>
                 </div>
-                <p class="photo-description" id="photo-category"><%= photo.category %></p>
-                <p class="photo-description">
-                    <%= photo.description %>
-                </p>
-                <button type="button"><a href="/photo/<%= photo.id %>">Voir l'image</a></button>
             </div>
         <% } %>
    </div>

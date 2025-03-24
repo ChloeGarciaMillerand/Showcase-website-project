@@ -20,20 +20,13 @@
 </section>
 
 <section class="new-photos">
-    <h2>Nouveautés</h2>
+    <h2>Derniers clichés</h2>
     <div class="photos-container">
         <% if (locals.photos && locals.photos.length) { %>
             <% for( let photo of photos ) { %>
-                <div class="new-photo">
-                    <h3><%= photo.name %></h3>
-                    <div class="photo-image-container">
-                        <img src="/img/<%= photo.id %>.jpg" alt="<%= photo.name %>">
-                    </div>
-                    <p class="photo-description" id="photo-characteristic"><%= photo.catagory %></p>
-                    <p class="photo-description">
-                        <%= photo.description %>
-                    </p>
-                    <button type="button"><a href="/product/<%= photo.id %>">Découvrir</a></button>
+                <div class="simple-photo">
+                    <a href="/photo/<%= photo.id %>"><img class="image-simple-photo" src="/img/<%= photo.id %>.jpg" alt="<%= photo.name %>"></a>
+                    <p class="photo-description" id="photo-category"><%= photo.category %></p>
                 </div>
             <% } %>
         <% } %>
