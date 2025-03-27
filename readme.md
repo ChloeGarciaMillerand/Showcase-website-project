@@ -27,8 +27,10 @@ Par défaut, seules trois photos sont affichées mais un script JavaScript perme
 
 ![portfolio](/Docs/previews/portfolio.png)
 
-![selec](/Docs/previews/portfolio_select.png)
+![select](/Docs/previews/portfolio_select.png)
 
 ## Contact
 
 J'ai créé un formulaire de contact mais n'ayant pas de SMTP, l'envoi a été configuré avec un service gmail qu'il faudrait adapter dans une situation réelle.
+
+![formulaire](/Docs/previews/form.png)
