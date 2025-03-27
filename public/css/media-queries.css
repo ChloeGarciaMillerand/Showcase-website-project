@@ -94,22 +94,25 @@
         width: 45%;
     }
 
-    /* Produit */
+    /* Photo */
     .photo-container {
         flex-direction: column;
         gap: 0;
-        margin: 0;
     }
 
     .photo-image {
-        margin: 2rem;
+        margin: 2rem auto;
         width: 90%;
     }
 
-    .photo-detail {
+    .photo-image img {
+        height: auto;
         width: 100%;
+    }
+
+    .photo-detail {
+        max-width: 100%;
         margin: 2rem auto;
-        padding: 0 2rem;
     }
 
     /* A propos */

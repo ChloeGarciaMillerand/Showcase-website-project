@@ -77,9 +77,10 @@
 }
 
 #photo-category {
-    color: var(--dark-grey);
-    border: solid 1px var(--light-grey);
-    border-radius: 2px;
+    background-color: var(--green);
+    color: white;
+    border: solid 1px var(--green);
+    border-radius: 5px;
     padding: 0.2rem 0.5rem;
 }
 
@@ -141,17 +142,19 @@
     gap: 2rem;
 }
 
+/*
 .photo-image {
-    width: 50%;
+    max-width: 75%;
 }
+*/
 
 .photo-image img {
     display: block;
-    width: 100%;
+    height: 100vh;
 }
 
 .photo-detail {
-    width: 50%;
+    max-width: 25%;
     margin: 0 auto;
 }
 
