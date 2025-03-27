@@ -33,19 +33,14 @@
 
 /* Index / Nouveautés */
 
- 
-
-.new-photos {
-    margin: 1rem;
+.photos-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    
 }
 
 .new-photos h2 {
     padding-left: 1rem;
-}
-
-.photos-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
 }
 
 .simple-photo {
@@ -56,15 +51,8 @@
 .image-simple-photo {
     width: 100%;
     border-radius: 5px;
-}
-
-.new-photo {
-    border: solid 1px lightgrey;
-    margin: 1rem;
-    padding: 1rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    object-fit: cover;
+    object-position: center;
 }
 
 .photo-image-container {

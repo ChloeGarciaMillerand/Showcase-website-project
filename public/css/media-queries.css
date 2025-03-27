@@ -1,3 +1,10 @@
+@media(max-width:1300px) {
+    /*Home*/
+    .image-simple-photo {
+        height: 200px;
+    }
+}
+
 @media(max-width:800px) {
     /* Catalogue */
 
@@ -5,6 +12,12 @@
         display: flex;
         flex-wrap: nowrap;
         overflow-x: auto;
+    }
+
+    .simple-photo {
+        flex: 0 0 auto;
+        width: auto; 
+        margin-bottom: 1rem;
     }
 
     .all-photos.show {
@@ -59,7 +72,7 @@
         align-items: center;
     }
 
-    .phana-text-container {
+    .ohana-text-container {
         width: 100%;
         padding-right: 0;
         margin-bottom: 1.5rem;
